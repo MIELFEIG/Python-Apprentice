@@ -12,10 +12,15 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup (width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
-
+for i in range(4):
+    print('Loop Iteration', i)
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
 tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
 
+for i in range(4):
+    tina.forward(150)
+    tina.left(90)
+    
 # tina.forward(150)                       # Move tina forward by the forward distance
 # tina.left(90)                           # Turn tina left by the left turn
 
@@ -28,10 +33,7 @@ tina.speed(2)                           # Make the turtle move as fast, but not 
 # tina.forward(150)
 # tina.left(90)
 
-tina.forward(150)
-tina.left(90)
-for i in range(4):
-  print('Loop Iteration', 4) 
+
 
 
                 # Close the window when we click on it

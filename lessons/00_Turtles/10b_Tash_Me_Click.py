@@ -52,5 +52,4 @@ def turtle_clicked(t, x, y):
 
 turtle.onclick(lambda x, y, t=turtle: turtle_clicked(t, x, y))
 
-
 turtle.exitonclick()

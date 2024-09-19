@@ -11,7 +11,12 @@ Hint: See 08a_More Turtle Programs, section 'Click on the Turtle'
 
 import turtle as turtle
 
-turtle.setup(width=600, height=600) 
+screen = turtle.Screen()  
+screen.setup(width=600, height=600)  
+
+t = turtle.Turtle()   
+#t.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
+
 
 def set_background_image(window, image_name):
     from pathlib import Path
@@ -23,25 +28,16 @@ def set_background_image(window, image_name):
     image = Image.open(image_path)
     
     window.setup(image.width, image.height, startx=0, starty=0)
-    window.bgpic(image_path)
+    window.bgpic(image_path)          
 
-    t = turtle.Turtle()             
-
-screen = turtle.Screen()      
-set_background_image(screen, "emoji.png")
-
-def set_turtle_image(turtle, image_name):
+def set_turtle_image(turtle, image_name,screen):
     from pathlib import Path
     image_dir = Path(__file__).parent / "images"
     image_path = str(image_dir / image_name)
 
-    screen = turtle.getscreen()
+    #screen = turtle.getscreen()
     screen.addshape(image_path)
     turtle.shape(image_path)
-
-set_turtle_image(turtle, "moustache1.gif")
-
-t = turtle.Turtle()   
 
 def turtle_clicked(t, x, y):
 
@@ -49,6 +45,11 @@ def turtle_clicked(t, x, y):
     
     for i in range(0,360, 20):
         t.tilt(20)
+
+
+set_background_image(screen, "emoji.png")
+
+set_turtle_image(t, "moustache1.gif", screen)
 
 t.onclick(lambda x, y, t=t: turtle_clicked(t, x, y))
 

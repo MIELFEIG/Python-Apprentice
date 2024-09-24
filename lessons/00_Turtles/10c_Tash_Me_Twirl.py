@@ -14,7 +14,7 @@ import turtle as turtle
 screen = turtle.Screen()  
 screen.setup(width=600, height=600)  
 
-t = turtle.Turtle()   
+
 #t.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
 
 
@@ -43,14 +43,14 @@ def turtle_clicked(t, x, y):
 
     print('turtle clicked!')
     
-    for i in range(0,360, 20):
-        t.tilt(20)
+    #for i in range(0,10):
+    t.left(20)
 
 
-set_background_image(screen, "emoji.png")
 
+t = turtle.Turtle()   
 set_turtle_image(t, "moustache1.gif", screen)
-
+set_background_image(screen, "emoji.png")
 t.onclick(lambda x, y, t=t: turtle_clicked(t, x, y))
 
 turtle.done()

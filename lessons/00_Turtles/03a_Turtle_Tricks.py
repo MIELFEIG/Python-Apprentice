@@ -15,51 +15,65 @@ turtle.setup (width=600, height=600)    # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 
-def drawTree(treeWidth,numSegments):
-    tina.pencolor('green')
+def drawTreeSegment(treeWidth):
     tina.pendown()
-    tina.left(90)
+    tina.setheading(90)
+    tina.begin_fill()
+    tina.fillcolor('#0bb839')
     tina.forward(200)
     tina.right(90)
     tina.forward(treeWidth)
     tina.right(90)
     tina.forward(200)
-    tina.left(180)
-    tina.forward(400)
-    tina.left(90)
+    tina.right(90)
     tina.forward(treeWidth)
-    tina.left(90)
-    tina.forward(400)
+    tina.end_fill()
     tina.penup()
+   
 
 tina.penup()
 tina.goto(-200,-250)
 
-drawTree(40)
 
 
 
-tina.goto(-250, -250)
-tina.pencolor('green')
-tina.pendown()
-tina.left(180)
-tina.forward(200)
-tina.left(90)
-tina.forward(40)
-tina.left(90)
-tina.forward(200)
-tina.left(180)
-tina.forward(400)
-tina.right(90)
-tina.forward(40)
-tina.right(90)
-tina.forward(400)
-tina.left(180)
-tina.forward(500)
-tina.left(90)
-tina.forward(40)
-tina.left(90)
-tina.forward(200)
+    
+
+
+
+def drawTree(treeWidth,numSegments):
+    for i in range(numSegments):
+        drawTreeSegment(40)
+        tina.setheading(90)
+        tina.forward(200)
+
+tina.penup()
+tina.goto(-300,-250)
+
+drawTree(40,3)
+
+tina.goto(150,-250)
+
+drawTree(40,3)
+
+tina.goto(-250,-250)
+
+drawTree(50,2)
+
+tina.goto(200,-250)
+
+drawTree(40,2)
+
+tina.goto(250,-250)
+
+drawTree(50,3)
+
+tina.goto(-200,-250)
+
+drawTree(50,1)
+
+
+
 
 tina.penup()
 tina.pencolor('black')

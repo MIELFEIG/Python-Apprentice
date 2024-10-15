@@ -13,7 +13,7 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup (width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
-
+tina.speed(50)
 
 def drawTreeSegment(treeWidth):
     tina.pendown()
@@ -36,16 +36,25 @@ tina.goto(-200,-250)
 
 
 
-
-    
-
-
-
 def drawTree(treeWidth,numSegments):
     for i in range(numSegments):
         drawTreeSegment(40)
         tina.setheading(90)
         tina.forward(200)
+
+
+def draw_circle(color, radius, x, y):
+    turtle.penup()
+    turtle.fillcolor(color)
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+
+draw_circle('white',100,0,-140)
+draw_circle('white',75,0,20)
+draw_circle('black',15,-35,100)
 
 tina.penup()
 tina.goto(-300,-250)
@@ -72,14 +81,6 @@ tina.goto(-200,-250)
 
 drawTree(50,1)
 
-
-
-
-tina.penup()
-tina.pencolor('black')
-tina.goto(0,100)
-
-tina.circle(50)
 
 
 

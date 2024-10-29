@@ -29,12 +29,6 @@ def drawTreeSegment(treeWidth):
     tina.forward(treeWidth)
     tina.end_fill()
     tina.penup()
-   
-
-tina.penup()
-tina.goto(-200,-250)
-
-
 
 def drawTree(treeWidth,numSegments):
     for i in range(numSegments):
@@ -55,6 +49,21 @@ def draw_circle(color, radius, x, y):
 draw_circle('white',100,0,-140)
 draw_circle('white',75,0,20)
 draw_circle('black',15,-35,100)
+draw_circle('white',5,-35,100)
+draw_circle('black',15,35,100)
+draw_circle('white',5,35,100)
+draw_circle('black',20,-50,140)
+draw_circle('black',20,50,140)
+draw_circle('black',10,0,50)
+
+tina.penup()
+tina.goto(-10,40)
+tina.pendown()
+tina.setheading(270)
+tina.circle(radius = 10, extent= 180, steps= 20)
+
+draw_circle('black',25,-90,-30)
+
 
 tina.penup()
 tina.goto(-300,-250)

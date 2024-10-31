@@ -62,7 +62,10 @@ tina.pendown()
 tina.setheading(270)
 tina.circle(radius = 10, extent= 180, steps= 20)
 
-draw_circle('black',25,-90,-30)
+draw_circle('black',35,-90,-30)
+draw_circle('black',35,90,-30)
+draw_circle('black',35,90,-140)
+draw_circle('black',35,-90,-140)
 
 
 tina.penup()

@@ -40,18 +40,26 @@ window.withdraw() # Hide the window; we just want to see pop ups
 age = simpledialog.askinteger("Your Age", "How old are you?")
 # Use if statements to determine the age group
 
-if age < 3:
+if age >= 0 and age < 3:
     messagebox.showinfo('What you are', "You are a baby.")
 elif age < 6:
     messagebox.showinfo('What you are', "You are a toddler.")
-elif age <
+elif age < 13:
+    messagebox.showinfo('What you are', "You are a child.")
+elif age < 20:
+    messagebox.showinfo('What you are', "You are a teenager.")
+elif age < 64:
+    messagebox.showinfo('What you are', "You are an adult.")
+else:
+    messagebox.showinfo('What you are', "You are a senior.")
 # and create a message
 
 # Show the message to the user
 
 
 
-window.mainloop()  # Keeps the window open
+    
+    window.mainloop()  # Keeps the window open
 
 
 # TODO: 

@@ -9,6 +9,17 @@ at the comments and the code snippets in the previous lessons, like
 
 """
 
+from tkinter import messagebox, simpledialog, Tk
+
+window = Tk()
+window.withdraw()
+
+number1 = simpledialog.askinteger("Number 1", "What is the first number?")
+number2 = simpledialog.askinteger("Number 2", "What is the second number?")
+
+sum = number1 + number2
+messagebox.showinfo('Adder', "The sum is" + str(sum))
+
 # Import the required modules
 
 # Create a window object
@@ -23,3 +34,4 @@ at the comments and the code snippets in the previous lessons, like
 
 # Keep the window open
 
+window.mainloop()

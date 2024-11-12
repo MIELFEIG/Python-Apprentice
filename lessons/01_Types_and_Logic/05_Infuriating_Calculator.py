@@ -21,6 +21,30 @@ you can ask for a string with simpledialog.askstring().
 
 """
 
+from tkinter import messagebox, simpledialog, Tk
+
+window = Tk()
+window.withdraw()
+
+number1 = simpledialog.askinteger("First Number", "Pick a number:")
+number2 = simpledialog.askinteger("Second Number", "Pick another number:")
+sum = number1 + number2
+difference = number1 - number2
+product = number1 * number2
+quotient = number1 / number2
+mathoperation= simpledialog.askstring("Math operation", "Choose a math operation to use:")
+
+if mathoperation == "Addition":
+   messagebox.showinfo('Addition', str(number1) + ' + ' + str(number2) + ' = ' + str(sum) )
+elif mathoperation == "Subtraction":
+   messagebox.showinfo('Subtraction', str(number1) + ' - ' + str(number2) + ' = ' + str(difference) )
+elif mathoperation == "Multiplication":
+   messagebox.showinfo('Multiplication', str(number1) + ' x ' + str(number2) + ' = ' + str(product) )
+elif mathoperation == "Division":
+   messagebox.showinfo('Division', str(number1) + ' / ' + str(number2) + ' = ' + str(quotient) )
+elif mathoperation == "Unknown":
+   messagebox.showerror('Unknown Operation')
+
 # Import the required modules
 
 # Create a window object

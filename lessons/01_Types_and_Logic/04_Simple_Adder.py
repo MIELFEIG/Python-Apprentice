@@ -14,8 +14,8 @@ from tkinter import messagebox, simpledialog, Tk
 window = Tk()
 window.withdraw()
 
-number1 = simpledialog.askinteger("Number 1", "What is the first number?")
-number2 = simpledialog.askinteger("Number 2", "What is the second number?")
+number1 = simpledialog.askinteger("Number 1", "Pick a number:")
+number2 = simpledialog.askinteger("Number 2", "Pick another number:")
 
 sum = number1 + number2
 messagebox.showinfo('Adder', "The sum is" + str(sum))
